@@ -1,3 +1,4 @@
+// Copyright: Ionescu Matei-Stefan - 333CA - 2023-2024
 #include <mpi.h>
 #include <thread>
 #include <stdio.h>

@@ -1,6 +1,7 @@
+# Copyright: Ionescu Matei-Stefan - 333CA - 2023-2024
 
 CC = mpic++
-FLAGS = -Wall -g
+FLAGS = -Wall
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -17,11 +18,6 @@ peer.o: peer.cpp peer.h utils.h
 
 tracker.o: tracker.cpp tracker.h utils.h
 	$(CC) -c $< $(FLAGS)
-
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-# run:
-# 	mpirun -np 4 tema3
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

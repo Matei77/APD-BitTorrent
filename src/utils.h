@@ -1,3 +1,4 @@
+// Copyright: Ionescu Matei-Stefan - 333CA - 2023-2024
 #pragma once
 
 #include <string>
@@ -9,7 +10,6 @@ constexpr int HASH_SIZE = 32;
 constexpr int MAX_CHUNKS = 100;
 
 constexpr int OK = 1;
-constexpr int STOP_PEER = 10;
 
 constexpr int FILE_REQUEST = 2;
 constexpr int PEER_UPDATE = 3;
@@ -20,7 +20,7 @@ constexpr int TRACKER_TAG = 1;
 constexpr int DOWNLOAD_TAG = 2;
 constexpr int UPLOAD_TAG = 3;
 
-const std::string POISON_HASH = "0000000000000000000000000000000";
+const std::string POISON_HASH = "-------------------------------";
 
 struct Segment {
 	int nr;
