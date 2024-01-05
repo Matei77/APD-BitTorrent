@@ -9,11 +9,11 @@ cd "$(dirname "$0")" || exit 1
 RED='\033[0;31m'
 NC='\033[0m'
 
-DEFAULT_IMAGE_NAME="$(basename "$(pwd)")"
+DEFAULT_IMAGE_NAME="$(basename "$(pwd)" | tr '[:upper:]' '[:lower:]')"
 DEFAULT_TAG='latest'
 DEFAULT_REGISTRY='gitlab.cs.pub.ro:5050'
 
-MOUNT_PROJECT_DIRECTORY="/build/$USER/$(basename "$(pwd)")"
+MOUNT_PROJECT_DIRECTORY="/build/$USER/$(basename "$(pwd)" | tr '[:upper:]' '[:lower:]')"
 
 #=============================================================================
 #=================================== UTILS ===================================
@@ -234,7 +234,7 @@ checker_main() {
     done
 
     if [ -z "$image_name" ] ; then
-        image_name="$(basename "$(pwd)")"
+        image_name="$(basename "$(pwd)" | tr '[:upper:]' '[:lower:]')"
 
         LOG_INFO "Building image..."
         docker build "${extra_docker_args[@]}" -q -t "$image_name" .
