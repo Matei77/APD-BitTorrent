@@ -8,7 +8,7 @@
 
 #include "peer.h"
 #include "tracker.h"
-#include "constants.h"
+#include "utils.h"
 
 
 int main(int argc, char *argv[]) {
@@ -24,8 +24,8 @@ int main(int argc, char *argv[]) {
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
 
     if (rank == TRACKER_RANK) {
-		auto tracker = Tracker();
-        tracker.start(numtasks, rank);
+		auto tracker = Tracker(numtasks, rank);
+        tracker.start();
     } else {
 		auto peer = Peer(numtasks, rank);
         peer.start();
