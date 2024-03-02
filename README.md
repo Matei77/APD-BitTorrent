@@ -4,7 +4,7 @@
 # APD Homework #3 - BitTorrent
 
 This program implements the BitTorrent protocol for peer-to-peer file sharing.
-It will be using MPI to communcate between computers in the network.
+It will be using MPI to communicate between computers in the network.
 
 ## Peer
 The peers are nodes in the decentralized network that are uploading and
